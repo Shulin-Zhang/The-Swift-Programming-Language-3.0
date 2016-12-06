@@ -101,6 +101,7 @@ farmAnimals.isDisjoint(with: cityAnimals)
 var namesOfIntegers = [Int: String]()
 namesOfIntegers[16] = "sixteen"
 namesOfIntegers = [:]
+namesOfIntegers.removeAll()
 
 var airports = ["YYZ": "Toronto Pearson", "DUB": "Dublin"]
 
