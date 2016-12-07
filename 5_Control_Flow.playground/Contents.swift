@@ -138,7 +138,7 @@ case let (x, y) where x == y:
     print()
 case let (x, y) where x == -y:
     print()
-case let (x , y):
+case let (x, y):
     print()
 }
 
@@ -198,22 +198,23 @@ default:
 }
 print(description)
 
-gameLoop: while square != finalSquare {
-    diceRoll += 1
-    if diceRoll == 7 {
-        diceRoll = 1
-    }
-    switch square + diceRoll {
-    case finalSquare:
-        break gameLoop
-    case let newSquare where newSquare > finalSquare:
-        continue gameLoop
-    default:
-        square += diceRoll
-        square += board[square]
-    }
-}
-print("Game over!")
+// !!! My god!! Infinite loop!!
+//gameLoop: while square != finalSquare {
+//    diceRoll += 1
+//    if diceRoll == 7 {
+//        diceRoll = 1
+//    }
+//    switch square + diceRoll {
+//    case finalSquare:
+//        break gameLoop
+//    case let newSquare where newSquare > finalSquare:
+//        continue gameLoop
+//    default:
+//        square += diceRoll
+//        square += board[square]
+//    }
+//}
+//print("Game over!")
 
 func greet(person: [String: String]) {
     guard let name = person["name"] else {
