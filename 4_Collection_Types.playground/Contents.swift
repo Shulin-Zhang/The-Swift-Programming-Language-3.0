@@ -95,7 +95,9 @@ let farmAnimals: Set = ["🐂", "🐔", "🐑"]
 let cityAnimals: Set = ["🐛", "🐭"]
 
 houseAnimals.isSubset(of: farmAnimals)
+houseAnimals.isStrictSubset(of: farmAnimals)
 farmAnimals.isSuperset(of: houseAnimals)
+farmAnimals.isStrictSuperset(of: houseAnimals);
 farmAnimals.isDisjoint(with: cityAnimals)
 
 var namesOfIntegers = [Int: String]()
