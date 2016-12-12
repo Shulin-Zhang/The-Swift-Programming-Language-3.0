@@ -36,7 +36,9 @@ shopingList[0] = "Six eggs"
 shopingList[4...6] = ["Bananas", "Apples"]
 shopingList.insert("Maple Syrup", at: 0)
 let mapleSyrup = shopingList.remove(at: 0)
+shopingList.insert(contentsOf: ["m", "n"], at: 1)
 let apples = shopingList.removeLast()
+print(shopingList)
 
 shopingList.first
 shopingList.last
@@ -45,8 +47,16 @@ for item in shopingList {
     print(item)
 }
 
+for item in shopingList.reversed() {
+    print(item)
+}
+
 for (index, value) in shopingList.enumerated() {
     print("Item \(index + 1): \(value)")
+}
+
+for (index, value) in shopingList.enumerated().reversed() {
+    print("Item: \(index): \(value)")
 }
 
 var letters = Set<Character>()
@@ -57,6 +67,8 @@ letters = []
 
 var favoriteGenres: Set<String> = ["Rock", "Classical", "Hip hop"]
 var favoriteGenres2: Set = ["Rock", "Classical", "Hip hop"]
+var favoriteGenres3: Set<String> = []
+var favoriteGenres4 = Set<String>()
 
 print("I have \(favoriteGenres.count) favorite music genres.")
 
@@ -101,6 +113,7 @@ farmAnimals.isStrictSuperset(of: houseAnimals);
 farmAnimals.isDisjoint(with: cityAnimals)
 
 var namesOfIntegers = [Int: String]()
+var namesOfIntegers2: [Int: String] = [:]
 namesOfIntegers[16] = "sixteen"
 namesOfIntegers = [:]
 namesOfIntegers.removeAll()
