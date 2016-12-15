@@ -59,11 +59,22 @@ class AutomaticCar: Car {
             gear = Int(currentSpeed / 10.0) + 1
         }
     }
+    override var gear: Int {
+        set {
+            super.gear = newValue + 2
+        }
+        
+        get {
+            return super.gear * 2
+        }
+    }
 }
 
 let automatic = AutomaticCar()
 automatic.currentSpeed = 35.0
 print("AutomaticCar: \(automatic.description)")
+automatic.gear = 5
+print(automatic.gear)
 
 final class finalClass {
     
