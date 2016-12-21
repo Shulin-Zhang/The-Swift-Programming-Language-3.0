@@ -306,6 +306,15 @@ class UntitledDocument: Document {
     }
 }
 
+class TestDocument: Document {
+    var test: Int
+    
+    init(test: Int) {
+        self.test = test
+        super.init(name: "")!
+    }
+}
+
 class SomeClass {
     required init() {
         
