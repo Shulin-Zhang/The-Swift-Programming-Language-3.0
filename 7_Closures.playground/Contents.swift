@@ -14,6 +14,9 @@ reversedNames = names.sorted(by: { (s1: String, s2: String) -> Bool in
 
 reversedNames = names.sorted(by: { (s1: String, s2: String) -> Bool in return s1 > s2 })
 
+let c = { (a: Int, b: Int) -> Bool in a > b }
+c(1, 2)
+
 reversedNames = names.sorted(by: { s1, s2 in return s1 > s2 } )
 
 reversedNames = names.sorted(by: { s1, s2 in s1 > s2 } )
