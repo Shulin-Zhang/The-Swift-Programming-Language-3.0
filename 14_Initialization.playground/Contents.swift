@@ -28,6 +28,7 @@ struct Celsius {
 let boilingPointOfWater = Celsius(fromFahrenheit: 212.0)
 let freezingPointOfWater = Celsius(fromKelvin: 273.15)
 
+
 struct Color {
     let red, green, blue: Double
     init(red: Double, green: Double, blue: Double) {

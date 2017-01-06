@@ -122,6 +122,10 @@ var someInt = 3
 var anotherInt = 107
 swap(&someInt, &anotherInt)
 
+func swapTwo<T>(_ a: inout T, _ b: inout T) {
+    (a, b) = (b, a)
+}
+
 func addTwoInts(_ a: Int, _ b: Int) -> Int {
     return a + b
 }

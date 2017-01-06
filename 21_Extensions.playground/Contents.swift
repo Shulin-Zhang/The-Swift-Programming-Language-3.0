@@ -110,3 +110,38 @@ func printIntegerKinds(_ numbers: Int...) {
 }
 printIntegerKinds(2, 19, -28, 0, -4, 0, 3)
 print("hello world")
+
+class TestClass {
+    var a = 1
+}
+
+extension TestClass {
+    convenience init(a: Int) {
+        self.init()
+        self.a = a
+    }
+    
+    static var b: Int {
+        return 3
+    }
+    
+    class var c: Int {
+        return 4
+    }
+    
+    static func aa() {
+        
+    }
+    
+    class func bb() {
+        
+    }
+    
+    final func cc() {
+        
+    }
+    
+    final var c: Int {
+        return 6
+    }
+}

@@ -89,4 +89,16 @@ class testClass {
     final subscript(index: Int) -> String {
         return "Value is \(index)"
     }
+    
+    subscript(string: String) -> Int? {
+        return Int(string)
+    }
+}
+
+class TestClass2: testClass {
+    override subscript(string: String) -> Int? {
+        let result = super[string]
+        print(result ?? 0)
+        return result
+    }
 }

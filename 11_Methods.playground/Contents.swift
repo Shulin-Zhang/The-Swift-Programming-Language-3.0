@@ -15,6 +15,10 @@ class Counter {
     func reset() {
         count = 0
     }
+    
+    func test(input: inout Int) {
+        
+    }
 }
 
 let counter = Counter()

@@ -41,11 +41,11 @@ default:
 }
 
 enum Barcode {
-    case upc(Int, Int, Int, Int)
+    case upc(a: Int, b: Int, Int, Int)
     case qrCode(String)
 }
 
-var productBarcode = Barcode.upc(8, 85909, 51226, 3)
+var productBarcode = Barcode.upc(a: 8, b: 85909, 51226, 3)
 productBarcode = .qrCode("ABCDEFGHIJKLMN")
 
 switch productBarcode {
@@ -56,7 +56,7 @@ case .qrCode(let prodctCode):
 }
 
 switch productBarcode {
-case let .upc(numberSystem, manufacturer, product, check):
+case let .upc(a: numberSystem, manufacturer, product, check):
     print()
 case let .qrCode(productCode):
     print()
@@ -70,6 +70,7 @@ enum ASCIIControlCharacter: Character {
 
 enum Planet2: Int {
     case mercury = 1, venus, earth, mars, jupiter, saturn, uranus, enptune
+    case a, b
 }
 
 enum CompassPoint2: String {
